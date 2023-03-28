@@ -23,7 +23,7 @@ return (
         <p>{errors.tos}</p>
 
         <form onSubmit={onSubmit}>
-            <label>Name:&nbsp;
+            <label>Username:&nbsp;
                 <input 
                 type="text"
                 value={username}
