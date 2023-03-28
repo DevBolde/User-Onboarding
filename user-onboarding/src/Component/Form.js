@@ -4,6 +4,13 @@ const Form = (props) =>{
 const { change, submit, errors } = props;
 const { username, email, password, tos } = props.values;
 
+const paragraphStyle = {
+    color: 'red',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    lineHeight: '1.5',
+  };
+
     const onChange = evt => {
         const { name, value, checked, type } = evt.target
         const newVal = type === 'checkbox' ? checked : value;
@@ -17,10 +24,10 @@ const { username, email, password, tos } = props.values;
 return (
     <>
         <h1>This is a Form...</h1>
-        <p>{errors.username}</p>
-        <p>{errors.password}</p>
-        <p>{errors.email}</p>
-        <p>{errors.tos}</p>
+        <p style={paragraphStyle}>{errors.username}</p>
+        <p style={paragraphStyle}>{errors.password}</p>
+        <p style={paragraphStyle}>{errors.email}</p>
+        <p style={paragraphStyle}>{errors.tos}</p>
 
         <form onSubmit={onSubmit}>
             <label>Username:&nbsp;
@@ -55,7 +62,7 @@ return (
                 onChange={onChange}
                 />
             </label>&nbsp;
-            <input type="submit" value="Create a Friend!"/>
+            <input type="submit" value="Create a Friend!" name="submitBtn"/>
         </form>
     </>
 )    
