@@ -23,7 +23,7 @@ function App() {
   const [users, setUsers] = useState([])
 
   const handleSubmit = () => {
-    axios.post(`https://reqres.in/api/users`, formValues)
+    axios.post('https://regres.in/api/users', formValues)
     .then(res => {
       setUsers([res.data, ...users])
     })
